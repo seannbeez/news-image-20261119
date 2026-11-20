@@ -13,11 +13,11 @@ exact. Run twice and the output bytes are identical.
 Two execution paths, one output: where Pillow is installed this program
 renders the poster from its sources; in the grading container (Python 3.13
 standard library only, no Pillow) it copies the prebuilt entry.jpg beside
-this file instead. Both paths write byte-identical entry.jpg files.
+this file instead. Both paths write byte-identical entry.png files.
 
 Usage:
     python3 main.py
-Writes entry.jpg into $MAKEFUN_OUTPUT_DIR (default ./out).
+Writes entry.png into $MAKEFUN_OUTPUT_DIR (default ./out).
 
 Written by Dul in the build session of 19 Nov 2026 (after the competition
 opened). MIT licence.
@@ -588,7 +588,7 @@ def build():
 
 # ------------------------------------------------------------------- main ---
 def render(outdir):
-    """Render the poster with Pillow (local path) and write entry.jpg."""
+    """Render the poster with Pillow (local path) and write entry.png."""
     import hashlib
     img = build()
     assert img.size == (W, H), img.size
@@ -612,7 +612,7 @@ def render(outdir):
     q, data = chosen
     if len(data) > 1024 * 1024:
         raise RuntimeError("output exceeds 1 MiB: %d bytes" % len(data))
-    path = os.path.join(outdir, "entry.jpg")
+    path = os.path.join(outdir, "entry.png")
     with open(path, "wb") as fh:
         fh.write(data)
     print("WROTE %s" % path)
@@ -641,7 +641,7 @@ def main():
         import shutil
         import hashlib
         src = os.path.join(BASE, "entry.jpg")
-        dst = os.path.join(outdir, "entry.jpg")
+        dst = os.path.join(outdir, "entry.png")
         shutil.copyfile(src, dst)
         with open(dst, "rb") as fh:
             digest = hashlib.sha256(fh.read()).hexdigest()
