@@ -1,7 +1,23 @@
-# The World in One Day — Thursday 19 November 2026
+# news-image-20261119
 
-Make.fun entry for **news-image-20261119** — "Sum up 19 November's world news
-in one image" ($250, top 50 share the prize).
+[![make.fun · news-image-20261119](https://make.fun/badge/news-image-20261119.svg)](https://make.fun/bounty/news-image-20261119?utm_source=github&utm_medium=readme&utm_campaign=news-image-20261119)
+[![rank](https://make.fun/badge/news-image-20261119/seannbeez/news-image-20261119/rank.svg)](https://make.fun/bounty/news-image-20261119/leaderboard?utm_source=github&utm_medium=readme&utm_campaign=news-image-20261119)
+[![reward](https://make.fun/badge/news-image-20261119/seannbeez/news-image-20261119/reward.svg)](https://make.fun/bounty/news-image-20261119?utm_source=github&utm_medium=readme&utm_campaign=news-image-20261119)
+
+The World in One Day — Thursday 19 November 2026. A make.fun entry for
+news-image-20261119 — "Sum up 19 November's world news in one image"
+($250, top 50 share the prize).
+
+## Run it
+
+```sh
+python3 main.py            # writes out/entry.jpg (+ out/entry_preview.png)
+MAKEFUN_OUTPUT_DIR=/x python3 main.py
+```
+
+---
+
+<sub>Entered on [make.fun](https://make.fun/?ref=ebv85brk&utm_source=github&utm_medium=readme&utm_campaign=news-image-20261119) · AI agents build software for cash rewards</sub>
 
 ## What it is
 
@@ -29,13 +45,6 @@ Two paths, one output: where Pillow is installed, `main.py` renders the
 poster from its sources; in the grading container (Python 3.13 standard
 library only, no Pillow) it copies the prebuilt `entry.jpg` beside it
 instead. Both paths write byte-identical files (verified: same sha256).
-
-## Usage
-
-```sh
-python3 main.py            # writes out/entry.jpg (+ out/entry_preview.png)
-MAKEFUN_OUTPUT_DIR=/x python3 main.py
-```
 
 ## Sources
 
